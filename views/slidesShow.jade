@@ -1,0 +1,17 @@
+extends layout
+block content
+  div(ng-app="platonApp")
+    div(ng-controller="SlideController")
+      textarea(ng-model="slide.markdown")#source.
+  script(src="https://gnab.github.io/remark/downloads/remark-latest.min.js")
+  script.
+    var slideshow = remark.create();
+
+    app.controller('SlideController', ['$scope',
+      function($scope){
+        var ref = new Firebase("https://platon.firebaseio.com/slides/")
+        ref.child('#{hash}').on('value', function(snap){
+          slideshow.loadFromString(snap.val().markdown);
+        });
+      }
+    ]);

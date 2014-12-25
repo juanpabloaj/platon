@@ -1,0 +1,20 @@
+{
+  "name": "platon",
+  "version": "0.0.1",
+  "description": "Slides from markdown",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": {
+    "name": "JuanPablo AJ",
+    "email": "jpabloaj@gmail.com",
+    "url": "http://juanpabloaj.com/"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.10.6",
+    "firebase": "^2.0.6",
+    "jade": "^1.8.2"
+  }
+}

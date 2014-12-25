@@ -1,0 +1,13 @@
+extends layout
+block content
+  div(ng-app="platonApp")
+    a(href="/#{hash}/show") show
+    div(ng-controller="SlideController")
+      textarea(ng-model="slide.markdown")#markdown-box.
+  script.
+
+    app.controller('SlideController', ['$scope', 'Slide',
+      function($scope, Slide){
+        Slide("#{hash}").$bindTo($scope, 'slide');
+      }
+    ]);
