@@ -1,9 +1,27 @@
 extends layout
 block content
   div(ng-app="platonApp")
-    a(href="/#{hash}/show") show
-    div(ng-controller="SlideController")
-      textarea(ng-model="slide.markdown")#markdown-box.
+    div(ng-controller="SlideController")#markdown-box
+      a(href="/#{hash}/show")
+        span.glyphicon.glyphicon-play-circle
+        |  presentation mode
+      hr
+      div#markdown-text
+        textarea(ng-model="slide.markdown")
+  footer
+    div#footer-message
+      div.col-xs-6.col-xs-offset-1
+        p
+          | Made with 
+          span.glyphicon.glyphicon-heart
+          |  , passion, and a big help from my friends: 
+          a(href="https://www.firebase.com/") Firebase
+          |  & 
+          a(href="http://remarkjs.com/") remarkjs.
+
+      div(style="float:right").col-xs-3
+        p
+          | Vi&ntilde;a del Mar, Chile, 2014.
   script.
 
     app.controller('SlideController', ['$scope', 'Slide',
