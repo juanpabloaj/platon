@@ -26,7 +26,7 @@ site.route('/')
   .get(function(req, res){
     newHash = utils.genRandomId();
     var ref = new firebase(firebaseUrl + '/' + newHash);
-    ref.set({markdown:'#title 1'});
+    ref.set({markdown:utils.defaultMarkdownMessage});
     res.redirect('/' + newHash);
   });
 
