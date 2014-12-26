@@ -40,7 +40,10 @@ site.route('/')
   .get(function(req, res){
     newHash = utils.genRandomId();
     var ref = new firebase(firebaseUrl + '/' + newHash);
-    ref.set({markdown:utils.defaultMarkdownMessage});
+    ref.set({
+      markdown:utils.defaultMarkdownMessage,
+      createdAt:firebase.ServerValue.TIMESTAMP
+    });
     res.redirect('/' + newHash);
   });
 
