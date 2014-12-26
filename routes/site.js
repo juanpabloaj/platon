@@ -6,6 +6,14 @@ var firebase = require('firebase');
 
 var firebaseUrl = "https://platon.firebaseio.com/slides";
 
+function checkIfSlideIdExist(slideId, cb){
+  var slidesRef = new firebase(firebaseUrl);
+  slidesRef.child(slideId).once('value', function(snapshot){
+    var exists = (snapshot.val() !== null );
+    cb(slideId, exists);
+  });
+}
+
 site.use(function(req, res, next){
   next();
 });
@@ -13,7 +21,13 @@ site.use(function(req, res, next){
 site.route('/:hashId')
   .get(function(req, res){
     var hashId = req.params.hashId;
-    res.render('slidesEdit', {hash:hashId});
+    checkIfSlideIdExist(hashId, function(slideId, exists){
+      if (exists){
+        res.render('slidesEdit', {hash:hashId});
+      } else {
+        res.redirect('/');
+      }
+    });
   });
 
 site.route('/:hashId/show')
