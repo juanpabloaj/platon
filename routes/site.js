@@ -15,7 +15,12 @@ function checkIfSlideIdExist(slideId, cb){
 }
 
 site.use(function(req, res, next){
-  next();
+  if (req.url === '/favicon.ico') {
+    res.writeHead(200, {'Content-Type': 'image/x-icon'} );
+    res.end(/* icon content here */);
+  } else {
+    next();
+  }
 });
 
 site.route('/:hashId')
