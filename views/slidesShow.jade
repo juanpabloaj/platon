@@ -4,6 +4,5 @@ block content
     div(ng-controller="SlideShowController")
       input(type="hidden", value="#{hash}")#hashId
       textarea(ng-model="slide.markdown")#source.
-  script(src="https://gnab.github.io/remark/downloads/remark-latest.min.js")
   script.
     var slideshow = remark.create();

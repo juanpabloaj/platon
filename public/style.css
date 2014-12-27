@@ -60,7 +60,7 @@ footer .glyphicon-heart {
     border:0px;
     width:100%;
     height:100%;
-    min-height:400px;
+    min-height:500px;
 
     border: none;
     overflow: auto;
@@ -68,4 +68,42 @@ footer .glyphicon-heart {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+#preview-box {
+    margin-top:1%;
+    height:600px;
+    overflow-y:scroll;
+}
+
+.preview-slide {
+    padding-top:1px;
+    margin-top:20px;
+    background-color:#fff;
+    width:320px;
+    height:240px;
+    font-size:8px;
+    -webkit-box-shadow: 0 0 6px #b6b6b6;
+    -moz-box-shadow: 0 0 6px #b6b6b6;
+    box-shadow: 0 0 6px #b6b6b6;
+}
+
+.preview-content {
+    margin:22px 12px;
+}
+
+.preview-slide h1 {
+    font-size:21px;
+}
+
+.preview-slide h2 {
+    font-size:17px;
+}
+
+.preview-slide h3 {
+    font-size:14px;
+}
+
+.preview-slide h1, h2, h3 {
+    text-align:center;
 }

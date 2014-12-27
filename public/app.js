@@ -10,10 +10,17 @@ app
       return $firebase(ref).$asObject();
     };
   }])
-  .controller('SlideEditController', ['$scope', 'Slide',
-    function($scope, Slide){
+  .controller('SlideEditController', ['$scope','$sce', 'Slide',
+    function($scope, $sce, Slide){
       var hashId = document.getElementById('hashId').getAttribute('value');
       Slide(hashId).$bindTo($scope, 'slide');
+      $scope.change = function() {
+        $scope.previews = [];
+        var markdownSlides = $scope.slide.markdown.split('---\n');
+        angular.forEach(markdownSlides, function(markdownSlide){
+          this.push($sce.trustAsHtml(remark.convert(markdownSlide)));
+        }, $scope.previews);
+      };
     }
   ])
   .controller('SlideShowController', ['$scope',

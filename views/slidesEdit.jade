@@ -1,14 +1,19 @@
 extends layout
 block content
   div(ng-app="platonApp")
-    div(ng-controller="SlideEditController")#markdown-box
-      a(href="/#{hash}/show")
-        span.glyphicon.glyphicon-play-circle
-        |  Presentation mode
-      hr
-      div#markdown-text
-        input(type="hidden", value="#{hash}")#hashId
-        textarea(ng-model="slide.markdown")
+    div(ng-controller="SlideEditController").container.center-block.row
+      div#markdown-box.col-md-8
+        a(href="/#{hash}/show")
+          span.glyphicon.glyphicon-play-circle
+          |  Presentation mode
+        hr
+        div#markdown-text
+          input(type="hidden", value="#{hash}")#hashId
+          textarea(ng-model="slide.markdown",ng-change="change()")
+      div#preview-box.col-md-5.hidden-sm.hidden-xs
+        div(ng-repeat="preview in previews")
+          div.preview-slide.center-block
+            div.preview-content(ng-bind-html="preview") {{ preview }}
   footer
     div#footer-message
       div.col-xs-6.col-xs-offset-1
