@@ -1,12 +1,13 @@
 extends layout
 block content
   div(ng-app="platonApp")
-    div(ng-controller="SlideController")#markdown-box
+    div(ng-controller="SlideEditController")#markdown-box
       a(href="/#{hash}/show")
         span.glyphicon.glyphicon-play-circle
         |  Presentation mode
       hr
       div#markdown-text
+        input(type="hidden", value="#{hash}")#hashId
         textarea(ng-model="slide.markdown")
   footer
     div#footer-message
@@ -22,10 +23,3 @@ block content
       div(style="float:right").col-xs-3
         p
           | Vi&ntilde;a del Mar, Chile, 2014.
-  script.
-
-    app.controller('SlideController', ['$scope', 'Slide',
-      function($scope, Slide){
-        Slide("#{hash}").$bindTo($scope, 'slide');
-      }
-    ]);
