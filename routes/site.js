@@ -55,4 +55,9 @@ site.route('/')
     res.redirect('/' + newHash);
   });
 
+site.route('*')
+  .get(function(req, res){
+    res.redirect('/');
+  });
+
 module.exports = site;
