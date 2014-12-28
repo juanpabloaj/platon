@@ -18,6 +18,7 @@
     "jade": "^1.8.2"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "should": "^4.4.2"
   }
 }
