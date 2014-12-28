@@ -2,7 +2,7 @@ extends layout
 block content
   div(ng-app="platonApp")
     div(ng-controller="SlideEditController").container.center-block.row
-      div#markdown-box.col-md-8
+      div#markdown-box.col-xs-11.col-sm-8.col-md-6
         a(href="/#{hash}/show")
           span.glyphicon.glyphicon-play-circle
           |  Presentation mode
@@ -16,7 +16,7 @@ block content
             div.preview-content(ng-bind-html="preview") {{ preview }}
   footer
     div#footer-message
-      div.col-xs-6.col-xs-offset-1
+      div.col-xs-8.col-xs-offset-1
         p
           | Made with 
           span.glyphicon.glyphicon-heart
@@ -25,6 +25,6 @@ block content
           |  & 
           a(href="http://remarkjs.com/") remarkjs.
 
-      div(style="float:right").col-xs-3
+      div(style="float:right").col-xs-3.hidden-xs
         p
           | Vi&ntilde;a del Mar, Chile, 2014.

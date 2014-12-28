@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    margin-bottom:42px;
+    margin-bottom:52px;
 }
 
 footer {
@@ -18,16 +18,17 @@ footer {
   bottom:0;
   width:100%;
   background-color:#448aff;
-  height: 42px;
+  height: 52px;
 }
 
 #footer-message {
-  padding-top: 14px;
+  padding-top: 18px;
 }
 
 footer p {
   color:#fff;
   font-size:12px;
+  margin-bottom:0px;
 }
 
 footer p a, footer p a:hover {
@@ -47,8 +48,7 @@ footer .glyphicon-heart {
     background-color:#ffffff;
 }
 #markdown-box {
-    margin: 4% 4%;
-    width:400px;
+    margin-top:4%;
 }
 
 #markdown-box a {
