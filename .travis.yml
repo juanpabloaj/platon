@@ -1,7 +1,15 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 before_install:
-  - npm install -g jshint
+- npm install -g jshint
 script:
-  - jshint $(git diff HEAD~1 --name-only --diff-filter=AM | grep .js$ )
+- jshint $(git diff HEAD~1 --name-only --diff-filter=AM | grep .js$ )
+deploy:
+  provider: heroku
+  api_key:
+    secure: GjZ3Eco7aQV/SKYumPmCUN4e6wR1zdLKu2VnvoQZ29qDh85CSc05wd1c/y4ox0WjxihcbK/qrqZjNmz6Cmvhg2+oeAzNmPn90t59MtQpSgcX9DWXeTbz16fpMo8QAulB9esQJdkZonG/ASWsIdmh79rgjpdeWOGFEF0XhE8Gvyw=
+  app:
+    master: platonio
+  on:
+    repo: juanpabloaj/platon
