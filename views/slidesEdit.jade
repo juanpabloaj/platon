@@ -9,7 +9,7 @@ block content
         hr
         div#markdown-text
           input(type="hidden", value="#{hash}")#hashId
-          textarea(ng-model="slide.markdown")
+          textarea(ng-model="slide.markdown", ng-change="markdownChanged()")
       div#preview-box.col-md-5.hidden-sm.hidden-xs
         div(ng-repeat="preview in previews")
           div.remark-slide-preview.center-block
