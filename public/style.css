@@ -76,34 +76,33 @@ footer .glyphicon-heart {
     overflow-y:scroll;
 }
 
-.preview-slide {
-    padding-top:1px;
-    margin-top:20px;
-    background-color:#fff;
-    width:320px;
-    height:240px;
-    font-size:8px;
-    -webkit-box-shadow: 0 0 6px #b6b6b6;
-    -moz-box-shadow: 0 0 6px #b6b6b6;
-    box-shadow: 0 0 6px #b6b6b6;
+.remark-slide-preview {
+  width:320px;
+  height:240px;
+  display: table;
+  table-layout: fixed;
+  padding-top:1px;
+  margin-top:20px;
+  background-color:#fff;
+  -webkit-box-shadow: 0 0 6px #b6b6b6;
+  -moz-box-shadow: 0 0 6px #b6b6b6;
+  box-shadow: 0 0 6px #b6b6b6;
 }
 
-.preview-content {
-    margin:22px 12px;
+.remark-slide-content-preview {
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: table-cell;
+  font-size: 8px;
+  padding: 1em 4em 1em 4em;
 }
-
-.preview-slide h1 {
-    font-size:21px;
+.remark-slide-content-preview h1 {
+  font-size: 21px;
 }
-
-.preview-slide h2 {
-    font-size:17px;
+.remark-slide-content-preview h2 {
+  font-size: 17px;
 }
-
-.preview-slide h3 {
-    font-size:14px;
-}
-
-.preview-slide h1, h2, h3 {
-    text-align:center;
+.remark-slide-content-preview h3 {
+  font-size: 14px;
 }

@@ -12,8 +12,8 @@ block content
           textarea(ng-model="slide.markdown")
       div#preview-box.col-md-5.hidden-sm.hidden-xs
         div(ng-repeat="preview in previews")
-          div.preview-slide.center-block
-            div.preview-content(ng-bind-html="preview") {{ preview }}
+          div.remark-slide-preview.center-block
+            div.remark-slide-content-preview(ng-bind-html="preview") {{ preview }}
   footer
     div#footer-message
       div.col-xs-8.col-xs-offset-1
