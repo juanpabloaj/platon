@@ -83,14 +83,12 @@ footer .glyphicon-heart {
   table-layout: fixed;
   padding-top:1px;
   margin-top:20px;
-  background-color:#fff;
   -webkit-box-shadow: 0 0 6px #b6b6b6;
   -moz-box-shadow: 0 0 6px #b6b6b6;
   box-shadow: 0 0 6px #b6b6b6;
 }
 
 .remark-slide-content-preview {
-  background-color: #fff;
   background-position: center;
   background-repeat: no-repeat;
   display: table-cell;
@@ -109,4 +107,38 @@ footer .glyphicon-heart {
 
 .remark-slide-content-preview ul {
   padding-left:2em;
+}
+
+#theme-select {
+    color:#727272;
+}
+
+#theme-select select {
+    color:#727272;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* themes */
+
+.default-theme {
+    background-color:#ffffff;
+    color:#000000;
+}
+
+.default-theme a {
+    color:#337ab7;
+}
+
+.platon-theme {
+    background-color:#03A9F4;
+    color:#ffffff;
+}
+
+.platon-theme a {
+    color:#FF4081;
 }

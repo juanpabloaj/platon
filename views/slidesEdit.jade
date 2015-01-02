@@ -6,13 +6,16 @@ block content
         a(href="/#{hash}/show")
           span.glyphicon.glyphicon-play-circle
           |  Presentation mode
+        span#theme-select.pull-right
+          | Theme: 
+          select(ng-model="slide.theme", ng-options="theme as theme for theme in themes", ng-change="themeChanged()")
         hr
         div#markdown-text
           input(type="hidden", value="#{hash}")#hashId
           textarea(ng-model="slide.markdown", ng-change="markdownChanged()")
       div#preview-box.col-md-5.hidden-sm.hidden-xs
         div(ng-repeat="preview in previews")
-          div.remark-slide-preview.center-block
+          div.remark-slide-preview.center-block(ng-class="slide.theme")
             div.remark-slide-content-preview(ng-bind-html="preview") {{ preview }}
   footer
     div#footer-message

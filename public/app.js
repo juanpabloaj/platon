@@ -26,6 +26,9 @@ app
       };
 
       $scope.$watch('slide', $scope.markdownChanged);
+
+      $scope.themes = ['default-theme', 'platon-theme'];
+
     }
   ])
   .controller('SlideShowController', ['$scope',
@@ -34,6 +37,10 @@ app
       var ref = new Firebase('https://platon.firebaseio.com/slides/');
       ref.child(hashId).on('value', function(snap){
         slideshow.loadFromString(snap.val().markdown);
+        angular.forEach(
+          document.querySelectorAll('.remark-slide-content'), function(div){
+            angular.element(div).addClass(snap.val().theme);
+        });
       });
     }
   ]);
