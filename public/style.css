@@ -142,3 +142,12 @@ footer .glyphicon-heart {
 .platon-theme a {
     color:#FF4081;
 }
+
+.black-theme {
+    background-color:#212121;
+    color:#ffffff;
+}
+
+.black-theme a {
+    color:#ffffff;
+}
