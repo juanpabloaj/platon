@@ -4,7 +4,7 @@ var utils = require('../lib/utils');
 
 var firebase = require('firebase');
 
-var firebaseUrl = "https://platon.firebaseio.com/slides";
+var firebaseUrl = 'https://platon.firebaseio.com/slides';
 
 function checkIfSlideIdExist(slideId, cb){
   var slidesRef = new firebase(firebaseUrl);
@@ -20,7 +20,7 @@ site.use(function(req, res, next){
     res.end(/* icon content here */);
   } else if ( req.url === '/robots.txt' ) {
     res.type('text/plain');
-    res.send("User-agent: *\nDisallow: /");
+    res.send('User-agent: *\nDisallow: /');
   } else {
     next();
   }
@@ -50,7 +50,8 @@ site.route('/')
     var ref = new firebase(firebaseUrl + '/' + newHash);
     ref.set({
       markdown:utils.defaultMarkdownMessage,
-      createdAt:firebase.ServerValue.TIMESTAMP
+      createdAt:firebase.ServerValue.TIMESTAMP,
+      theme: 'default-theme'
     });
     res.redirect('/' + newHash);
   });
