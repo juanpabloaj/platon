@@ -151,3 +151,24 @@ footer .glyphicon-heart {
 .black-theme a {
     color:#ffffff;
 }
+
+.monokai-theme {
+    background-color:#282828;
+    color:#f8f8f2;
+}
+
+.monokai-theme a {
+    color:#AE81FF;
+}
+
+.monokai-theme h1 {
+    color:#F92672;
+}
+
+.monokai-theme h2 {
+    color:#A6E22E;
+}
+
+.monokai-theme h3 {
+    color:#66D9EF;
+}

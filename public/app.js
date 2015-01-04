@@ -27,7 +27,9 @@ app
 
       $scope.$watch('slide', $scope.markdownChanged);
 
-      $scope.themes = ['default-theme', 'platon-theme', 'black-theme'];
+      $scope.themes = [
+        'default-theme', 'platon-theme', 'black-theme', 'monokai-theme'
+      ];
 
     }
   ])
