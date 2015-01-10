@@ -95,6 +95,18 @@ footer .glyphicon-heart {
   font-size: 8px;
   padding: 1em 4em 1em 4em;
 }
+
+.remark-slide-content-preview pre {
+  padding: 5px;
+  margin: 0 0 2px;
+  font-size: 7px;
+  border-radius:2px;
+}
+.remark-slide-content-preview code {
+    font-size: 7px;
+    padding:1px 2px;
+    border-radius:2px;
+}
 .remark-slide-content-preview h1 {
   font-size: 21px;
 }
