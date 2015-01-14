@@ -15,10 +15,13 @@
   "dependencies": {
     "express": "^4.10.6",
     "firebase": "^2.0.6",
-    "jade": "^1.8.2"
+    "jade": "^1.8.2",
+    "request": "^2.51.0"
   },
   "devDependencies": {
     "mocha": "^2.1.0",
-    "should": "^4.4.2"
+    "nock": "^0.56.0",
+    "should": "^4.4.2",
+    "supertest": "^0.15.0"
   }
 }

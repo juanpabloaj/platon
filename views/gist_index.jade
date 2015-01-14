@@ -1,0 +1,25 @@
+extends gist_layout
+block content
+  div.container
+    div.center-block
+      h2 Slideshow from github gist markdown.
+      h3 Usage:
+      div.
+        Create a github gist with markdown code, with the gist id generate the presentation
+      p
+        code.
+          /gist/gist_id
+  footer
+    div#footer-message
+      div.col-xs-8.col-xs-offset-1
+        p
+          | Made with 
+          span.glyphicon.glyphicon-heart
+          |  , passion, and a big help from my friends: 
+          a(href="https://www.firebase.com/") Firebase
+          |  & 
+          a(href="http://remarkjs.com/") remarkjs.
+
+      div(style="float:right").col-xs-3.hidden-xs
+        p
+          | Vi&ntilde;a del Mar, Chile, 2015.
