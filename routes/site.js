@@ -20,7 +20,7 @@ site.use(function(req, res, next){
     res.end(/* icon content here */);
   } else if ( req.url === '/robots.txt' ) {
     res.type('text/plain');
-    res.send('User-agent: *\nDisallow: /');
+    res.send('User-agent: *\nDisallow:');
   } else {
     next();
   }
