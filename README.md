@@ -8,9 +8,11 @@ Inspired by [socrates.io](http://socrates.io/)
 
 Powered by [remark](https://github.com/gnab/remark) and [Firebase](https://www.firebase.com).
 
-## Development environment
+## Running your own
 
-To run in a local computer:
+Sign up for your own [Firebase][firebase], and change to your account url in `routes/site.js` and `public/app.js`.
+
+To run the local server for development
 
     node server.js
 
@@ -18,4 +20,5 @@ Or with [nodemon][nodemon]
 
     nodemon
 
+[firebase]: https://firebase.com
 [nodemon]: https://github.com/remy/nodemon
