@@ -121,6 +121,10 @@ footer .glyphicon-heart {
   padding-left:2em;
 }
 
+.remark-slide-content-preview img {
+    max-width:100%;
+}
+
 #theme-select {
     color:#727272;
 }
