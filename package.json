@@ -1,6 +1,6 @@
 {
   "name": "platon",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Slides from markdown",
   "main": "server.js",
   "scripts": {
