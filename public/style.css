@@ -107,6 +107,12 @@ footer .glyphicon-heart {
     padding:1px 2px;
     border-radius:2px;
 }
+.remark-slide-content-preview blockquote {
+    padding: 4px 8px;
+    margin: 0 0 8px;
+    font-size: 7px;
+    border-left: 2px solid #eee;
+}
 .remark-slide-content-preview h1 {
   font-size: 21px;
 }
