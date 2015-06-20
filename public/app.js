@@ -1,3 +1,6 @@
+function validFirebaseId(id){
+  return ! Boolean(id.match(/\.|#|\$|\[|\]/));
+}
 
 app = angular.module('platonApp', ['firebase']);
 
@@ -10,9 +13,15 @@ app
       return $firebase(ref).$asObject();
     };
   }])
-  .controller('SlideEditController', ['$scope','$sce', 'slideFactory',
-    function($scope, $sce, slideFactory){
+  .controller('SlideEditController',
+    ['$scope', '$window', '$sce', 'slideFactory',
+    function($scope, $window, $sce, slideFactory){
       var hashId = document.getElementById('hashId').getAttribute('value');
+
+      if ( ! validFirebaseId(hashId) ) {
+        $window.location.href = '/';
+      }
+
       slideFactory(hashId).$bindTo($scope, 'slide');
 
       $scope.markdownChanged = function() {
@@ -33,16 +42,23 @@ app
 
     }
   ])
-  .controller('SlideShowController', ['$scope',
-    function($scope){
+  .controller('SlideShowController', ['$scope', '$window',
+    function($scope, $window){
       var hashId = document.getElementById('hashId').getAttribute('value');
-      var ref = new Firebase('https://platon.firebaseio.com/slides/');
-      ref.child(hashId).on('value', function(snap){
-        slideshow.loadFromString(snap.val().markdown);
-        angular.forEach(
-          document.querySelectorAll('.remark-slide-content'), function(div){
-            angular.element(div).addClass(snap.val().theme);
+
+      if ( ! validFirebaseId(hashId) ) {
+        $window.location.href = '/';
+      } else {
+
+        var ref = new Firebase('https://platon.firebaseio.com/slides/');
+        ref.child(hashId).on('value', function(snap){
+          slideshow.loadFromString(snap.val().markdown);
+          angular.forEach(
+            document.querySelectorAll('.remark-slide-content'), function(div){
+              angular.element(div).addClass(snap.val().theme);
+          });
         });
-      });
+
+      }
     }
   ]);
