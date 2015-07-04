@@ -6,9 +6,13 @@ block content
         a(href="/#{hash}/show")
           span.glyphicon.glyphicon-play-circle
           |  Presentation mode
-        span#theme-select.pull-right
-          | Theme: 
-          select(ng-model="slide.theme", ng-options="theme as theme for theme in themes", ng-change="themeChanged()")
+        ul.list-inline.pull-right
+          li
+            span#theme-select
+              ul.list-inline
+                li Theme:
+                li
+                  select(ng-model="slide.theme", ng-options="theme as theme for theme in themes", ng-change="themeChanged()")
         hr
         div#markdown-text
           input(type="hidden", value="#{hash}")#hashId
