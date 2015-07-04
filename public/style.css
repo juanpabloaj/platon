@@ -131,7 +131,7 @@ footer .glyphicon-heart {
     max-width:100%;
 }
 
-#theme-select {
+#theme-select, #share-list {
     color:#727272;
 }
 
@@ -143,6 +143,14 @@ footer .glyphicon-heart {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+.twitter-icon {
+    color:#00aced;
+}
+
+.facebook-icon {
+    color:#3B5998;
 }
 
 /* themes */

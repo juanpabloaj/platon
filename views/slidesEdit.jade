@@ -1,4 +1,6 @@
 extends layout
+block header-extras
+    link(rel="stylesheet", href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
 block content
   div(ng-app="platonApp")
     div(ng-controller="SlideEditController").container.center-block.row
@@ -7,6 +9,8 @@ block content
           span.glyphicon.glyphicon-play-circle
           |  Presentation mode
         ul.list-inline.pull-right
+          li
+            include ./share.jade
           li
             span#theme-select
               ul.list-inline
