@@ -131,6 +131,10 @@ footer .glyphicon-heart {
     max-width:100%;
 }
 
+#presentation-mode a:hover {
+    color:#FF4081;
+}
+
 #theme-select, #share-list {
     color:#727272;
 }
