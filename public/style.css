@@ -122,6 +122,15 @@ footer .glyphicon-heart {
 .remark-slide-content-preview h3 {
   font-size: 14px;
 }
+.remark-slide-content-preview h4 {
+  font-size: 11px;
+}
+.remark-slide-content-preview h5 {
+  font-size: 9px;
+}
+.remark-slide-content-preview h6 {
+  font-size: 7px;
+}
 
 .remark-slide-content-preview ul {
   padding-left:2em;
