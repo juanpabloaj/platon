@@ -2,20 +2,21 @@ extends gist_layout
 block content
   div.container
     div.center-block
-      h2 Slideshow from github gist markdown
-      h3 Usage:
-      div.
-        Create a github gist with markdown code, with the gist id generate the presentation
+      h1 Slideshow from github gist markdown
+      hr
+      h2 Usage:
+      p Create a github gist with markdown code, with the gist id generate the presentation
       p
         code.
           /gist/gist_id
-      h3 Example:
+      br
+      h2 Example:
         div
-          h4 gist markdown
-          div
+          h3 gist markdown
+          p
             a(href="https://gist.github.com/juanpabloaj/8f231e0003db50c1fcb7") https://gist.github.com/juanpabloaj/8f231e0003db50c1fcb7
-          h4 Slideshow
-          div
+          h3 Slideshow
+          p
             a(href="http://platon.io/gist/8f231e0003db50c1fcb7") http://platon.io/gist/8f231e0003db50c1fcb7
   footer
     div#footer-message
