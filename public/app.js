@@ -2,7 +2,7 @@ function validFirebaseId(id){
   return ! Boolean(id.match(/\.|#|\$|\[|\]/));
 }
 
-app = angular.module('platonApp', ['firebase']);
+var app = angular.module('platonApp', ['firebase']);
 
 app
   .factory('slideFactory', ['$firebase', function($firebase) {
