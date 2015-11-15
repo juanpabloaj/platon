@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "engines":{
+    "node": "0.12.7"
+  },
   "author": {
     "name": "JuanPablo AJ",
     "email": "jpabloaj@gmail.com",
