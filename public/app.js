@@ -5,12 +5,16 @@ function validFirebaseId(id){
 var app = angular.module('platonApp', ['firebase']);
 
 app
-  .factory('slideFactory', ['$firebase', function($firebase) {
+  .factory('slideRef', function(){
     return function(slide){
-      var ref = new Firebase('https://platon.firebaseio.com/slides/')
+      return new Firebase('https://platon.firebaseio.com/slides/')
         .child(slide);
-
-      return $firebase(ref).$asObject();
+    };
+  })
+  .factory('slideFactory',
+    ['$firebase', 'slideRef', function($firebase, slideRef) {
+    return function(slide){
+      return $firebase(slideRef(slide)).$asObject();
     };
   }])
   .controller('SlideEditController',
@@ -42,16 +46,15 @@ app
 
     }
   ])
-  .controller('SlideShowController', ['$scope', '$window',
-    function($scope, $window){
+  .controller('SlideShowController', ['$scope', '$window', 'slideRef',
+    function($scope, $window, slideRef){
       var hashId = document.getElementById('hashId').getAttribute('value');
 
       if ( ! validFirebaseId(hashId) ) {
         $window.location.href = '/';
       } else {
 
-        var ref = new Firebase('https://platon.firebaseio.com/slides/');
-        ref.child(hashId).on('value', function(snap){
+        slideRef(hashId).on('value', function(snap){
           slideshow.loadFromString(snap.val().markdown);
           angular.forEach(
             document.querySelectorAll('.remark-slide-content'), function(div){
