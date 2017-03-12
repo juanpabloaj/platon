@@ -18,7 +18,7 @@ footer {
   bottom:0;
   width:100%;
   background-color:#448aff;
-  height: 52px;
+  height: 62px;
 }
 
 #footer-message {
@@ -28,7 +28,7 @@ footer {
 footer p {
   color:#fff;
   font-size:12px;
-  margin-bottom:0px;
+  margin-bottom:1px;
 }
 
 footer p a, footer p a:hover {
