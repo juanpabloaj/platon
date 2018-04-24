@@ -4,7 +4,6 @@ node_js:
 before_install:
 - npm install -g jshint
 script:
-- npm test
 - jshint $(git diff HEAD~1 --name-only --diff-filter=AM | grep .js$ )
 deploy:
   provider: heroku
