@@ -10,6 +10,16 @@ html(lang="en")
     script(src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js")
     block header-extras
+    script.
+        var config = {
+        apiKey: "AIzaSyDBcTAEr2-10LSs-4Owza9y5qbLEZuq0a0",
+        authDomain: "platon.firebaseapp.com",
+        databaseURL: "https://platon.firebaseio.com",
+        projectId: "firebase-platon",
+        storageBucket: "firebase-platon.appspot.com",
+        messagingSenderId: "205116078661"
+        };
+        firebase.initializeApp(config);
     script(src="/app.js")
     title Platon.io
     if 'production' == process.env.NODE_ENV
